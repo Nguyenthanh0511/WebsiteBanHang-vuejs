@@ -1,28 +1,37 @@
 <template>
+  <MainView/>
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </nav>
-  <router-view/>
+  <router-view
+  :baseURL ="baseURL"
+  :categories="categories"
+  >
+  </router-view>
 </template>
 <script>
 import axios from 'axios'
+import MainView from './components/MainView.vue'
 export default {
 
+  components:{MainView},
   data(){
-
     return{
-      baseURL :'https://limitless-lake-55070.herokuapp.com/category/',
+      baseURL :'https://limitless-lake-55070.herokuapp.com/',
       products:[],
       categories:[]
     }
   },
   methods:{
      async fetchData(){
-      await axios.get(this.baseURL + "Category/")
+      await axios.get(this.baseURL + "category/")
       .then((res)=>(this.categories = res.data))
-      .catch((err)=> cosole.log('err',err));
+      .catch((err)=> console.log('err',err));
      }
+  },
+  mounted(){
+    this.fetchData();
   }
 }
 </script>
