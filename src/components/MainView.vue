@@ -84,7 +84,10 @@
             aria-haspopup="true"
             aria-expanded="false"
           >
-            Accounts
+            <router-link class="dropdown-item" :to="{ name: 'Admin' }"
+              >Admin</router-link
+            >
+            
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
            

@@ -12,7 +12,7 @@
       <p class="card-text">
         {{ category.description }}
       </p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+ <a href="#" class="btn btn-primary">Go somewhere</a>     
     </div>
   </div>
 </template>

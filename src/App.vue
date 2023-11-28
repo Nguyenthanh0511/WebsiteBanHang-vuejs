@@ -7,6 +7,7 @@
   <router-view
   :baseURL ="baseURL"
   :categories="categories"
+  :products="products"
   >
   </router-view>
 </template>
@@ -28,8 +29,14 @@ export default {
       await axios.get(this.baseURL + "category/")
       .then((res)=>(this.categories = res.data))
       .catch((err)=> console.log('err',err));
+
+      await axios.get(this.baseURL + "product/")
+      .then((res)=>(this.products = res.data))
+      .catch((err)=>console.log('err',err));
      }
+
   },
+
   mounted(){
     this.fetchData();
   }
