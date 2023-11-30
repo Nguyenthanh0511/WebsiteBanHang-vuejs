@@ -1,6 +1,7 @@
 # WebsiteBanHang-vuejs
 Đây là dự án làm bài tập lớn của tôi , được xây dựng dựa trên công nghệ vuejs ,đơn giản , dễ hiểu và tiện dụng. 
 Tôi thiết kế dựa trên những nền kiến thức cơ bản 
+
 author : https://github.com/webtutsplus/ecommerce-vuejs
 
 Để chạy dự án 
